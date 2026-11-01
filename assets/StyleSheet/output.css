@@ -172,8 +172,20 @@
   }
 }
 @layer utilities {
+  .pointer-events-none {
+    pointer-events: none;
+  }
+  .fixed {
+    position: fixed;
+  }
   .relative {
     position: relative;
+  }
+  .top-0 {
+    top: 0px;
+  }
+  .left-0 {
+    left: 0px;
   }
   .z-1 {
     z-index: 1;
@@ -193,6 +205,9 @@
   .table {
     display: table;
   }
+  .h-3 {
+    height: calc(var(--spacing) * 3);
+  }
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
@@ -201,6 +216,12 @@
   }
   .h-fit {
     height: fit-content;
+  }
+  .w-3 {
+    width: calc(var(--spacing) * 3);
+  }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
   }
   .w-37 {
     width: calc(var(--spacing) * 37);
@@ -247,9 +268,6 @@
   .animate-topDonw {
     animation: var(--animate-topDonw);
   }
-  .cursor-pointer {
-    cursor: pointer;
-  }
   .resize {
     resize: both;
   }
@@ -277,6 +295,9 @@
   .gap-15 {
     gap: calc(var(--spacing) * 15);
   }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -289,11 +310,17 @@
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
   }
+  .border-lime {
+    border-color: var(--color-lime);
+  }
   .border-t-\[\#8080806b\] {
     border-top-color: #8080806b;
   }
   .border-b-\[\#8080806b\] {
     border-bottom-color: #8080806b;
+  }
+  .bg-lime {
+    background-color: var(--color-lime);
   }
   .object-cover {
     object-fit: cover;
@@ -353,14 +380,15 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .duration-300 {
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
+  }
   :is(.\*\:flex > *) {
     display: flex;
   }
   :is(.\*\:w-48\/100 > *) {
     width: calc(48 / 100 * 100%);
-  }
-  :is(.\*\:cursor-pointer > *) {
-    cursor: pointer;
   }
   :is(.\*\:flex-col > *) {
     flex-direction: column;
@@ -486,6 +514,9 @@
     }
   }
 }
+body {
+  cursor: none;
+}
 @keyframes topDown {
   50% {
     transform: translateY(-30px);
@@ -532,7 +563,6 @@
     position: relative;
     z-index: 1;
     display: flex;
-    cursor: pointer;
     align-items: center;
     justify-content: center;
     overflow: hidden;

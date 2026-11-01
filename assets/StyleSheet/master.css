@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+
+@keyframes topDown {
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+
 @theme {
     --color-lime: #ccfc4c;
     --color-gray: #ababab;
@@ -9,7 +17,7 @@
 
 
 
-
+    --animate-topDonw: topDown 5s linear infinite;
 
 }
 
@@ -17,11 +25,11 @@
 @layer components {
 
     .parent {
-        @apply w-full flex justify-center items-center
+        @apply w-full flex justify-center items-center bg-black
     }
 
     .divcontain {
-        @apply w-full flex justify-center content-start  flex-wrap max-w-[1700px]
+        @apply w-full flex justify-center content-start flex-wrap max-w-[1700px] px-3
     }
 
     @media (min-width:2000px) {
@@ -30,5 +38,58 @@
         }
     }
 
+    .btnHover {
+        @apply rounded-full bg-lime text-black flex items-center relative justify-center overflow-hidden z-1 cursor-pointer
+    }
+}
 
+.btnHover {
+
+    &:hover {
+        &::after {
+            transform: scaleY(1);
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        transform: scaleY(0);
+        border-radius: 50px;
+        transform-origin: bottom;
+        background-color: white;
+        transition: 0.2s;
+        z-index: -1;
+    }
+}
+
+.mask1 {
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-size: 90%;
+        background-position: top right;
+        background-image: url(../Images/shape-5.png);
+        z-index: -1;
+        background-repeat: no-repeat;
+
+        @media (min-width: 1024px) {
+            background-size: 50%;
+            background-position: top right;
+        }
+    }
+}
+
+.anchor{
+    anchor-name: --my-anchor;
+}
+
+.play{
+    position: fixed;
+    position-anchor: --my-anchor;
+    top: anchor(77%);
+    right: anchor(70%);
 }

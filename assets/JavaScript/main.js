@@ -41,7 +41,7 @@ let q3 = setInterval(() => {
     else clearInterval(q3)
 }, 18)
 
-// ------- Scroll reveal -------//
+// ------- SCROLL REVEAL -------//
 const reveals = document.querySelectorAll(".reveal")
 
 const observer = new IntersectionObserver((entries) => {
@@ -58,6 +58,7 @@ const observer = new IntersectionObserver((entries) => {
 reveals.forEach((el) => observer.observe(el))
 
 
+// ------- SLIDER IN SECTION 03 ------- //
 const gamesSwiper = new Swiper('.gamesSwiper', {
 
     loop: true,
@@ -83,11 +84,6 @@ const gamesSwiper = new Swiper('.gamesSwiper', {
             slidesPerView: 2,
             spaceBetween: 20,
         },
-
-        1024: {
-            slidesPerView: 2,
-            spaceBetween: 24,
-        }
     }
 });
 
@@ -101,3 +97,5 @@ leftIMG.addEventListener("click", () => {
 rightIMG.addEventListener("click", () => {
     gamesSwiper.slideNext()
 })
+
+// -------  ------- //

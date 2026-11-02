@@ -146,7 +146,6 @@ body {
     }
 }
 
-
 .gamesSwiper {
     width: 100%;
     overflow: hidden;
@@ -172,7 +171,80 @@ body {
 }
 
 .gamesSwiper .swiper-pagination-bullet-active {
-    background: #c6ff3a;                     
-    width: 24px;                           
+    background: #c6ff3a;
+    width: 24px;
     border-radius: 4px;
+}
+
+.card:hover::before {
+    width: 46px;
+    height: 46px;
+    border-top: 2px solid #c6ff3a;
+    border-left: 2px solid #c6ff3a;
+}
+
+.card:hover::after {
+    width: 46px;
+    height: 46px;
+    border-bottom: 2px solid #c6ff3a;
+    border-right: 2px solid #c6ff3a;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 34px;
+    height: 34px;
+    border-top: 2px solid #2a2a2a;
+    border-left: 2px solid #2a2a2a;
+    border-top-left-radius: 6px;
+    transition: width 0.3s ease, height 0.3s ease, border-top 0.5s ease, border-left 0.5s ease;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+    border-bottom: 2px solid #2a2a2a;
+    border-right: 2px solid #2a2a2a;
+    border-bottom-right-radius: 6px;
+    transition: width 0.3s ease, height 0.3s ease, border-bottom 0.5s ease, border-right 0.5s ease;
+}
+
+.cardFigure {
+
+    &:hover {
+        .oldFig {
+
+            >i{
+                color: black;
+                transform: rotateY(360deg);
+            }
+
+            &::after {
+                transform: scaleY(1);
+            }
+        }
+    }
+
+    .oldFig {
+
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            transition: 0.4s;
+            border-radius: 50px;
+            background-color: #c6ff3a;
+            transform: scaleY(0);
+            transform-origin: top center;
+            z-index: -1;
+        }
+    }
 }

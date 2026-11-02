@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/Font/font/style.css">
     <link rel="stylesheet" href="assets/Font/FontSocials/style.css">
     <link rel="stylesheet" href="assets/StyleSheet/output.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
 </head>
 
@@ -134,7 +135,7 @@
                 <!--=======#2-2-2 RIGHT =======-->
                 <div class="flex flex-wrap gap-2.5 content-start *:uppercase *:w-full lg:w-55/100 lg:gap-8">
                     <span style="--d:0ms" class="reveal text-lime text-[clamp(18px,2vw,22px)] relative limeUnderline">about our eplay company</span>
-                    <h2 style="--d:120ms" class="reveal text-white text-[clamp(32px,10vw,67px)] lg:font-bold lg:max-w-170 lg:leading-15">Eplay Is An Independent Video <span class="text-lime">Game Studio</span> Based In Colorado!</h2>
+                    <h2 style="--d:120ms" class="reveal text-white text-[clamp(22px,6vw,67px)] lg:font-bold max-w-150 lg:max-w-170 lg:leading-15">Eplay Is An Independent Video <span class="text-lime">Game Studio</span> Based In Colorado!</h2>
                     <p style="--d:240px" class="reveal text-gray text-[clamp(16px,1.6vw,18px)]">Emerging trends in the esports industry include the growth of mobile esports, the integration of virtual reality in gaming experiences, and the increasing involvement of traditional sports.</p>
 
                     <div style="--d:360ms" class="reveal flex gap-5 max-w-120">
@@ -145,9 +146,88 @@
             </div>
         </section>
 
-        <!--==================#2-3 OUT NEWEST GAMES ==================-->
-        <section></section>
+        <!--==================#2-3 OUR NEWEST GAMES ==================-->
+        <section class="parent lg:mt-50 pb-50">
+            <div class="divcontain gap-8 relative">
 
+                <!--=======#2-3-1 LEFT =======-->
+                <div class="w-full flex flex-wrap gap-5 lg:w-50/100 *:w-full">
+
+                    <!--=======#2-3-1 TEXTS =======-->
+                    <div class="flex flex-wrap gap-5 content-start *:uppercase *:w-full lg:gap-8">
+                        <span style="--d:0ms" class="reveal text-lime text-[clamp(18px,2vw,22px)] relative limeUnderline">our Latest games</span>
+                        <h2 style="--d:120ms" class="reveal text-white text-[clamp(22px,6vw,63px)] lg:font-bold lg:leading-15">Our Newest Games Just<span class="text-lime">Dropped Ready to</span> Level Up?</h2>
+                    </div>
+
+                    <!--=======#2-3-2 SLIDER =======-->
+                    <div class="swiper gamesSwiper">
+
+                        <div class="swiper-wrapper">
+
+                            <figure class="swiper-slide">
+                                <img class="rounded-2xl" src="assets/Images/game-01.jpg" alt="Game 1">
+                            </figure>
+
+                            <figure class="swiper-slide">
+                                <img class="rounded-2xl" src="assets/Images/game-02.jpg" alt="Game 2">
+                            </figure>
+
+                            <figure class="swiper-slide">
+                                <img class="rounded-2xl" src="assets/Images/game-3.jpg" alt="Game 3">
+                            </figure>
+
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+
+                    </div>
+
+                    <!--=======#2-3-3 BTNS =======-->
+                    <div class="flex justify-between">
+
+                        <div class="flex gap-5 *:h-fit">
+                            <button class="btnHover px-3.5 py-3.5 text-xl" id="leftIMG"><i class="icon"></i></button>
+                            <button class="btnHover px-3.5 py-3.5 text-xl" id="rightIMG"><i class="icon"></i></button>
+                        </div>
+
+                        <button class="btnHover h-fit px-5 py-2.5 uppercase font-bold">view all games</button>
+                    </div>
+                </div>
+
+
+                <!--=======#2-3-2 RIGHT =======-->
+                <div class="hidden lg:flex w-45/100 -mt-60 justify-center">
+                    <figure class="mask2 relative w-115 h-263.5">
+                        <img class="rounded-full w-full h-full object-cover" src="assets/Images/top-image.jpg" alt="">
+                    </figure>
+                    <div class="absolute -top-90 left-1/2 -translate-x-1/2 flex flex-col items-end animate-topDonw">
+                        <img class="w-100 h-112.5 object-cover scale-150" src="assets/Images/middle-shape.png" alt="">
+                        <img class="w-14 object-cover mr-[clamp(80px,3.5vw,112px)] hidden xl:block" src="assets/Images/radius-shape.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
 
 
 
@@ -170,6 +250,7 @@
 
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 <script src="assets/JavaScript/main.js"></script>
 
 </html>

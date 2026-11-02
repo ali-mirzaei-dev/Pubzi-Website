@@ -10,6 +10,12 @@ body {
     }
 }
 
+@keyframes rightToLeft {
+    50%{
+        transform: translateX(30px);
+    }
+}
+
 
 @theme {
     --color-lime: #ccfc4c;
@@ -21,6 +27,7 @@ body {
 
 
     --animate-topDonw: topDown 5s linear infinite;
+    --animate-rightToLeft: rightToLeft 5s linear infinite;
 
 }
 
@@ -42,7 +49,7 @@ body {
     }
 
     .btnHover {
-        @apply rounded-full bg-lime text-black flex items-center relative justify-center overflow-hidden z-1
+        @apply rounded-full bg-lime text-black flex items-center relative justify-center overflow-hidden z-1 cursor-none
     }
 }
 
@@ -95,4 +102,20 @@ body {
     position-anchor: --my-anchor;
     top: anchor(77%);
     right: anchor(70%);
+}
+
+.limeUnderline {
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 110%;
+        height: 2px;
+        width: 10%;
+        background-color:#ccfc4c ;
+        border-radius: 50px;
+    }
+
+
 }

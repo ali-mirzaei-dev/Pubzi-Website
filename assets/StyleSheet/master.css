@@ -16,6 +16,24 @@ body {
     }
 }
 
+@keyframes marquee1 {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+@keyframes marquee2 {
+    from {
+        transform: translateX(-50%);
+    }
+    
+    to {
+        transform: translateX(0);
+    }
+}
 
 @theme {
     --color-lime: #ccfc4c;
@@ -28,6 +46,8 @@ body {
 
     --animate-topDonw: topDown 5s linear infinite;
     --animate-rightToLeft: rightToLeft 5s linear infinite;
+    --animate-marquee1: marquee1 30s linear infinite;
+    --animate-marquee2: marquee2 35s linear infinite;
 
 }
 
@@ -221,7 +241,7 @@ body {
     &:hover {
         .oldFig {
 
-            >i{
+            >i {
                 color: black;
                 transform: rotateY(360deg);
             }

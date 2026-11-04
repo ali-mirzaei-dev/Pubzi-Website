@@ -41,16 +41,19 @@ body {
         transform: translateX(0);
         opacity: 1;
     }
+
     49% {
-        transform: translateX(-100px);   
-        opacity: 0;                      
-    }
-    50% {
-        transform: translateX(100px);    
+        transform: translateX(-100px);
         opacity: 0;
     }
+
+    50% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
     100% {
-        transform: translateX(0);       
+        transform: translateX(0);
         opacity: 1;
     }
 }
@@ -305,5 +308,32 @@ body {
         position: absolute;
         border-radius: 16px;
         z-index: -1;
+    }
+}
+
+.logoSwiper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.logoSwiper .swiper-slide {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoSwiper img {
+    width: 100px;
+    height: 80px;
+    object-fit: contain;
+    filter: grayscale(1);
+    opacity: 0.4;
+    transition: 0.4s;
+
+    &:hover{
+        opacity: 1;
+        filter: grayscale(0);
+        scale: 1.05;
     }
 }

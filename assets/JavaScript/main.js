@@ -99,3 +99,39 @@ rightIMG.addEventListener("click", () => {
 })
 
 // -------  ------- //
+// ------- LOGO SLIDER ------- //
+
+const logoSwiper = new Swiper('.logoSwiper', {
+
+    loop: true,
+
+    slidesPerView: 4,
+
+    spaceBetween: 80,
+
+    speed: 800,
+
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
+
+    breakpoints: {
+        320: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        },
+
+        640: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+        },
+
+        1024: {
+            slidesPerView: 5,
+            spaceBetween: 80,
+        },
+    },
+
+});

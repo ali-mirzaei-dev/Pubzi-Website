@@ -1288,6 +1288,29 @@ body {
     z-index: -1;
   }
 }
+.logoSwiper {
+  width: 100%;
+  overflow: hidden;
+}
+.logoSwiper .swiper-slide {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logoSwiper img {
+  width: 100px;
+  height: 80px;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.4;
+  transition: 0.4s;
+  &:hover {
+    opacity: 1;
+    filter: grayscale(0);
+    scale: 1.05;
+  }
+}
 @property --tw-translate-x {
   syntax: "*";
   inherits: false;

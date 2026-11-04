@@ -129,7 +129,7 @@ const logoSwiper = new Swiper('.logoSwiper', {
         },
 
         1024: {
-            slidesPerView: 5,
+            slidesPerView: 6,
             spaceBetween: 80,
         },
     },

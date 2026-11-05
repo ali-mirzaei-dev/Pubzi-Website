@@ -98,7 +98,6 @@ rightIMG.addEventListener("click", () => {
     gamesSwiper.slideNext()
 })
 
-// -------  ------- //
 // ------- LOGO SLIDER ------- //
 
 const logoSwiper = new Swiper('.logoSwiper', {
@@ -135,3 +134,4 @@ const logoSwiper = new Swiper('.logoSwiper', {
     },
 
 });
+

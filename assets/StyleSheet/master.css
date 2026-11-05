@@ -83,10 +83,6 @@ body {
     --color-gray: #ababab;
     --color-white: #fefefe;
 
-
-
-
-
     --animate-topDonw: topDown 5s linear infinite;
     --animate-rightToLeft: rightToLeft 5s linear infinite;
     --animate-marquee1: marquee1 30s linear infinite;
@@ -180,8 +176,6 @@ body {
         background-color: #ccfc4c;
         border-radius: 50px;
     }
-
-
 }
 
 .reveal {
